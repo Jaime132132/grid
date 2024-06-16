@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos comunes para nav, main, aside y footer */
+nav,
+main,
+aside,
+footer {
+    background-color: rgb(167, 167, 167);
+}
+
+/* Estilos específicos para nav */
+nav {
+    grid-area: nav;
+    background-color: rgb(65, 89, 205);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Estilos específicos para main */
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    align-content: space-evenly
+}
+
+/* Estilos específicos para aside */
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    
+}
+
+/* Estilos específicos para footer */
+footer {
+    grid-area: footer;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    display: grid;
+    grid-template-areas:
+        "nav nav"
+        "aside main"
+        "footer footer";
+    height: 100vh;
+    grid-template-columns: 15% 1fr; /* Añadir una columna flexible */
+}
+
+/* Estilos para botones */
+button {
+    background: none; /* Quitar fondo */
+    border: none; /* Quitar borde */
+    color: black; /* Color del texto */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    font: inherit; /* Heredar la fuente del contenedor padre */
+    padding: 0; /* Quitar padding */
+}
+
+/* Estilos para las cards */
+.cards {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 90%;
+    margin: 15px;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Distribuir filas de manera flexible */
+    text-align: center;
+    width: 100%; /* Asegurar que las tarjetas ocupen todo el ancho disponible */
+    max-width: 300px; /* Máximo ancho para las tarjetas */
+    align-items: end;
+    justify-items: center;
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
+
+.cards-content {
+    padding: 20px;
+}
+.boton{
+    background-color: rgb(65, 89, 205);
+    width: 100%;
+    color: #fff;
+}
